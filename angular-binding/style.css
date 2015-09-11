@@ -19,6 +19,10 @@ h2.navbar-brand > a {
     text-align: right;
 }
 
+.description {
+    color: #757575;
+}
+
 /* List of artists */
 .table-artist > thead > tr > th:nth-child(1),
 .table-artist > tbody > tr > td:nth-child(1) {
