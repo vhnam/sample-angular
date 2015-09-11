@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Sample for Data binding with AngularJS">
+        <meta name="author" content="Hoai Nam Vo">
+
+        <title>AngularJS - Binding</title>
+
+        <!-- Style sheet -->
+        <link rel="stylesheet" href="/public/components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/public/components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body ng-app="data-binding">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="navbar-header">
+                    <h2 class="navbar-brand">
+                        <a href="/">AngularJS</a>
+                    </h2>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section ng-controller="ManagementController">
+            <div class="container">
+                <!-- Title -->
+                <h1>My favorite soloists</h1>
+
+                <!-- Form -->
+                <div class="form-management" ng-controller="FormController">
+                    <form class="navbar-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control"
+                                    autocomplete="off" spellcheck="false"
+                                    placeholder="Artist" ng-model="artist">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control"
+                                    autocomplete="off" spellcheck="false"
+                                    placeholder="Instrument" ng-model="instrument">
+                        </div>
+                        <button class="btn btn-primary" ng-click="insertArtist()">Insert</button>
+                    </form>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-artist">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Artist</th>
+                            <th>Instrument</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="artist in artists">
+                            <td>{{$index + 1}}</td>
+                            <td>{{artist.name}}</td>
+                            <td>{{artist.instrument}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- Scripts -->
+        <script src="/public/components/angular/angular.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

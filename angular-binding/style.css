@@ -1,0 +1,26 @@
+/* Header */
+.header {
+    width: 100%;
+    background-color: #337ab7;
+}
+
+h2.navbar-brand {
+    margin: 0;
+}
+
+h2.navbar-brand > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Management forn */
+.form-management {
+    margin: 20px 0;
+    text-align: right;
+}
+
+/* List of artists */
+.table-artist > thead > tr > th:nth-child(1),
+.table-artist > tbody > tr > td:nth-child(1) {
+    text-align: center;
+}
