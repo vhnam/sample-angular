@@ -1,3 +1,20 @@
+# Sample AngularJS
+
+## Installation
+* Install Node.js from [here](https://nodejs.org/en/)
+* Install packages
+```
+npm install -g bower
+npm install
+bower install
+```
+
+## Run
+```
+npm start
+```
+
+## License
 The MIT License (MIT)
 
 Copyright (c) 2015 Hoai Nam Vo
@@ -19,4 +36,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-

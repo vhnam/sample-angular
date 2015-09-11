@@ -1,0 +1,21 @@
+{
+  "name": "sample-angular",
+  "version": "1.0.0",
+  "authors": [
+    "Hoai Nam Vo <vhnam2504@gmail.com>"
+  ],
+  "description": "Sample for AngularJS",
+  "keywords": [
+    "AngularJS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "bootstrap": "~3.3.5"
+  }
+}
