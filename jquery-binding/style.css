@@ -28,3 +28,7 @@ h2.navbar-brand > a {
 .table-artist > tbody > tr > td:nth-child(1) {
     text-align: center;
 }
+
+.table-artist > tbody > tr > td {
+	vertical-align: middle;
+}
