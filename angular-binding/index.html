@@ -54,7 +54,7 @@
                                     autocomplete="off" spellcheck="false"
                                     placeholder="Instrument" ng-model="instrument">
                         </div>
-                        <button class="btn btn-primary" ng-click="insertArtist()">Insert</button>
+                        <button type="button" class="btn btn-primary" ng-click="insertArtist()">Insert</button>
                     </form>
                 </div>
 
@@ -65,13 +65,19 @@
                             <th>Index</th>
                             <th>Artist</th>
                             <th>Instrument</th>
+                            <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody ng-controller="ListController">
                         <tr ng-repeat="artist in artists">
                             <td>{{$index + 1}}</td>
                             <td>{{artist.name}}</td>
                             <td>{{artist.instrument}}</td>
+                            <td>
+                                <button type="button" class="btn btn-danger" ng-click="removeArtist($index)">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
