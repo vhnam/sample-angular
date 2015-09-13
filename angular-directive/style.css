@@ -1,0 +1,120 @@
+/* Header */
+.header {
+    width: 100%;
+    background-color: #337ab7;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h2.navbar-brand {
+    margin: 0;
+}
+
+h2.navbar-brand > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Timeline */
+
+main {
+    margin-top: 58px;
+    margin-bottom: 8px;
+}
+
+.status-box,
+.status {
+    width: 640px;
+    margin: 16px auto;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.14), 0 0 2px 2px rgba(0,0,0,0.098), 0 0 5px 1px rgba(0,0,0,0.084);
+}
+
+ .status .info-group {
+    display: flex;
+}
+
+.status-box .avatar,
+.status .avatar {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+    border: 0;
+}
+
+.status .nickname {
+    margin: 4px 0px;
+    font-weight: bold;
+}
+
+.status .time {
+    margin: 0px;
+    color: #757575;
+    font-weight: 400;
+}
+
+.status .content {
+    width: 100%;
+    padding: 16px;
+}
+
+.status .image {
+    text-align: center;
+}
+
+.status .image > img {
+    width: 100%;
+}
+
+.status-box .input {
+    display: flex;
+}
+
+.status-box .status-content {
+    width: 100%;
+    min-height: 36px;
+    overflow-y: hidden;
+    resize: none;
+    border: 0;
+    margin-top: 8px;
+}
+
+.status-box .toolbar {
+    display: flex;
+    margin-left: 8px;
+    margin-top: 8px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 8px;
+}
+
+.status-box .icon-insert-image {
+    margin-right: 24px;
+    margin-top: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.status-box .link-image {
+    width: 100%;
+    border: 0;
+}
+
+.status-box .btn-post {
+    margin-left: 16px;
+}
+
+@media(max-width: 640px) {
+    .status-box,
+    .status {
+        width: 100%;
+        margin: 8px auto;
+        padding: 8px;
+    }
+
+    .status .content {
+    padding: 8px;
+}
+}
