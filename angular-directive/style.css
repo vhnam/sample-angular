@@ -65,8 +65,9 @@ main {
     text-align: center;
 }
 
+.status-box .preview > img,
 .status .image > img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .status-box .input {
@@ -80,6 +81,10 @@ main {
     resize: none;
     border: 0;
     margin-top: 8px;
+}
+
+.status-box .status-content:focus {
+    border: none;
 }
 
 .status-box .toolbar {
@@ -104,6 +109,11 @@ main {
 
 .status-box .btn-post {
     margin-left: 16px;
+}
+
+.status-box .preview {
+    margin-top: 16px;
+    text-align: center;
 }
 
 @media(max-width: 640px) {

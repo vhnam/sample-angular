@@ -34,81 +34,26 @@
             </div>
         </header>
 
+        <!-- Timeline -->
         <main class="container" ng-controller="TimelineController">
+            <!-- Status box -->
             <section class="status-box">
                 <div class="input">
                     <img src="avatar.png" alt="Avatar" class="avatar">
-                    <textarea id="status-content" class="status-content" placeholder="What's on your mind?"></textarea>
+                    <textarea id="status-content" class="status-content" placeholder="What's on your mind?" ng-model="paragraph"></textarea>
                 </div>
                 <div class="toolbar">
                     <img src="insert-image.png" alt="Insert image" class="icon-insert-image">
-                    <input type="text" class="link-image" placeholder="Link to image">
-                    <button class="btn btn-primary btn-post">Post</button>
+                    <input type="text" class="link-image" ng-model="image" placeholder="Link to image">
+                    <button class="btn btn-primary btn-post" ng-click="postStatus()">Post</button>
+                </div>
+                <div class="preview" ng-show="image">
+                    <img ng-src="{{image}}" alt="Preview">
                 </div>
             </section>
-            <section class="status">
-                <div class="info-group">
-                    <img src="avatar.png" alt="Avatar" class="avatar">
-                    <div>
-                        <h5 class="nickname">Batman</h5>
-                        <h6 class="time">Sunday, September 13, 2015 at 1:20pm</h6>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="paragraph">
-                        <p>HÀNG RONG</p>
-                        <p>Hiếm ai trong nước Việt Nam này chưa một lần ăn hàng rong. Cô bán xôi, chị bán bánh mì, dì bán chè, mới hơn nữa là các bạn sinh viên bán sandwich, sushi,... đã quá thân thuộc.<p>
-                        <p>Nhưng hàng rong thì lại lấn chiếm 1 phần vỉa hè, làm cản trở người đi đường, cản trở lưu thông đường bộ nên pháp luật cấm, trật tự đô thị bắt, dân phòng đuổi,... Các cô, các chị, các dì, các bạn chạy hoặc xui hơn là bị lấy mất công cụ hành nghề (phải chuộc lại) nhưng tuyệt nhiên họ không hề nghĩ đến chuyện bỏ nghề, bỏ hàng rong.</p>
-                        <p>Trong thâm tâm tôi nghĩ, nếu 1 ngày hàng rong biến mất hẳn trong cõi VN thì chúng ta sẽ hối hận, hối hận bởi vì đã mất đi cái gì đó thân thuộc của văn hóa, mất đi 1 phương thức tiện lợi để mua bán.</p>
-                        <p>Nhưng có bạn sẽ phản bác rằng "những gánh hàng rong vừa mất vệ sinh vừa mất mĩ quan, văn hóa gì cái thứ ấy". Đúng vậy, hàng rong có nhiều nơi mất vệ sinh, xập xệ nhưng đó không phải lý do để cấm, chuyện này cũng như không thể cấm facebook vì những ảnh hưởng xấu của nó và không thể cấm các loại xe vì tai nạn.</p>
-                        <p>Thay vì cấm, hoàn toàn có thể kiểm định thực phẩm những gánh hàng rong, cũng như hoàn toàn có thể đặt ra những tiêu chuẩn để những hàng rong được phép hoạt động.</p>
-                        <p>Thực tế thì, dẫu muốn cấm cũng sẽ rất lâu nữa mới có thể làm được, bởi có hàng triệu người đang mưu sinh bằng những gánh hàng. Bộ lao động công bố VN có số người thất nghiệp thấp cũng nhờ những hàng rong này, cấm sao được số lượng lớn như thế.</p>
-                        <p>Nói linh tinh cho vui chứ hiện tại công ty mình đang tuyển vị trí bán hàng part-time trước cổng các trường TH, THCS, THPT; thời gian từ 5h30 đến 7h15 sáng, lương thưởng cũng ok lắm, bạn nào muốn làm inbox nhé!</p>
-                    </div>
-                    <div class="image">
-                        <img src="" alt="Image">
-                    </div>
-                </div>
-            </section>
-            <section class="status">
-                <div class="info-group">
-                    <img src="avatar.png" alt="Avatar" class="avatar">
-                    <div>
-                        <h5 class="nickname">Batman</h5>
-                        <h6 class="time">Sunday, September 13, 2015 at 1:20pm</h6>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="paragraph"></div>
-                    <div class="image">
-                        <img src="https://fbcdn-photos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-0/p480x480/12009650_1141393805888379_6450930866243499702_n.jpg?oh=176ea9655d9d03395f7228a6e088e66c&amp;oe=5672D26A&amp;__gda__=1453364417_b5455acbff57d30552231e278b4ea011" alt="Image">
-                    </div>
-                </div>
-            </section>
-            <section class="status">
-                <div class="info-group">
-                    <img src="avatar.png" alt="Avatar" class="avatar">
-                    <div>
-                        <h5 class="nickname">Batman</h5>
-                        <h6 class="time">Sunday, September 13, 2015 at 1:20pm</h6>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="paragraph">
-                        <p>HÀNG RONG</p>
-                        <p>Hiếm ai trong nước Việt Nam này chưa một lần ăn hàng rong. Cô bán xôi, chị bán bánh mì, dì bán chè, mới hơn nữa là các bạn sinh viên bán sandwich, sushi,... đã quá thân thuộc.<p>
-                        <p>Nhưng hàng rong thì lại lấn chiếm 1 phần vỉa hè, làm cản trở người đi đường, cản trở lưu thông đường bộ nên pháp luật cấm, trật tự đô thị bắt, dân phòng đuổi,... Các cô, các chị, các dì, các bạn chạy hoặc xui hơn là bị lấy mất công cụ hành nghề (phải chuộc lại) nhưng tuyệt nhiên họ không hề nghĩ đến chuyện bỏ nghề, bỏ hàng rong.</p>
-                        <p>Trong thâm tâm tôi nghĩ, nếu 1 ngày hàng rong biến mất hẳn trong cõi VN thì chúng ta sẽ hối hận, hối hận bởi vì đã mất đi cái gì đó thân thuộc của văn hóa, mất đi 1 phương thức tiện lợi để mua bán.</p>
-                        <p>Nhưng có bạn sẽ phản bác rằng "những gánh hàng rong vừa mất vệ sinh vừa mất mĩ quan, văn hóa gì cái thứ ấy". Đúng vậy, hàng rong có nhiều nơi mất vệ sinh, xập xệ nhưng đó không phải lý do để cấm, chuyện này cũng như không thể cấm facebook vì những ảnh hưởng xấu của nó và không thể cấm các loại xe vì tai nạn.</p>
-                        <p>Thay vì cấm, hoàn toàn có thể kiểm định thực phẩm những gánh hàng rong, cũng như hoàn toàn có thể đặt ra những tiêu chuẩn để những hàng rong được phép hoạt động.</p>
-                        <p>Thực tế thì, dẫu muốn cấm cũng sẽ rất lâu nữa mới có thể làm được, bởi có hàng triệu người đang mưu sinh bằng những gánh hàng. Bộ lao động công bố VN có số người thất nghiệp thấp cũng nhờ những hàng rong này, cấm sao được số lượng lớn như thế.</p>
-                        <p>Nói linh tinh cho vui chứ hiện tại công ty mình đang tuyển vị trí bán hàng part-time trước cổng các trường TH, THCS, THPT; thời gian từ 5h30 đến 7h15 sáng, lương thưởng cũng ok lắm, bạn nào muốn làm inbox nhé!</p>
-                    </div>
-                    <div class="image">
-                        <img src="https://fbcdn-photos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-0/p480x480/12009650_1141393805888379_6450930866243499702_n.jpg?oh=176ea9655d9d03395f7228a6e088e66c&amp;oe=5672D26A&amp;__gda__=1453364417_b5455acbff57d30552231e278b4ea011" alt="Image">
-                    </div>
-                </div>
-            </section>
+
+            <!-- Statuses -->
+            <status ng-repeat="status in timeline | reverse" time="{{status.time}}" paragraph="{{status.paragraph}}" image="{{status.image}}">
         </main>
 
 
