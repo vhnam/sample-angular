@@ -1,0 +1,133 @@
+/* Primary */
+body {
+    padding-top: 52px;
+}
+
+/* Navbar */
+.navigation {
+    background-color: rgb(25,118,210);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.navigation .navbar-header {
+    display: flex;
+}
+
+.navigation .navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .navbar-navigator {
+    list-style-type: none;
+    margin: 0;
+}
+
+.navigation .navbar-navigator > li {
+    float: left;
+}
+
+.navigation .navbar-navigator > li:hover {
+    background-color: rgb(52, 126, 200);
+}
+
+.navigation .navbar-navigator > li > a {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    line-height: 52px;
+    padding: 0 16px;
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s, background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s, transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+}
+
+.navigation .navbar-brand a {
+    color: #fff;
+    text-decoration: none;
+    background: transparent url("/angular-spa/logo-nav.png") no-repeat scroll 0px 8px;
+    width: 135px;
+    height: 52px;
+    display: block;
+    overflow: hidden;
+    text-indent: -3000px;
+}
+
+/* Header */
+header.background-sky {
+    background: transparent linear-gradient(#0143A3, #0273D4) repeat scroll 0% 0%;
+    color: #fff;
+}
+
+header .background-sf {
+    height: calc(100vh - 52px);
+    text-align: center;
+    position: relative;
+    background: transparent url("/angular-spa/sf-paper.png") no-repeat scroll center bottom / 100% auto;
+}
+
+header .header-content {
+    margin: 0;
+    position: absolute;
+    width: 300px;
+    top: 20vh;
+    left: calc(50vw - 150px);
+    right: calc(50vw - 150px);
+}
+
+header .header-brand {
+    padding-top: 224px;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    background: transparent url("/angular-spa/shield-large.png") no-repeat scroll center top;
+}
+
+/* Introduce versions */
+section {
+    min-height: calc(100vh - 52px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.introduction .logo {
+    max-width: 100%;
+}
+
+.introduction .info-list {
+    list-style-type: none;
+}
+
+.introduction .info-list > li {
+    line-height: 32px;
+}
+
+.angular-2 {
+    background: transparent linear-gradient(#0143A3, #0273D4) repeat scroll 0% 0%;
+    color: #fff;
+}
+
+.angular-2 a {
+    color: #bdbdbd;
+}
+
+.angular-2 .col-md-3 {
+    margin-top: 14px;
+}
+
+/* Responsive Design */
+@media(max-width: 640px) {
+    .navigation .navbar-brand {
+        padding: 0 16px;
+    }
+
+    .angular-2 .col-md-3 {
+        margin-top: 0;
+    }
+}
