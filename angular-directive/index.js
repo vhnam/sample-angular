@@ -3,14 +3,21 @@
 
     angular.module('data-directive', ['monospaced.elastic'])
 
-        // Reverse timeline when insert a status
+        // Caching template
+        .run(['$http', '$templateCache', function($http, $templateCache) {
+            $http.get('status.html', {
+                cache: $templateCache
+            });
+        }])
+
+        // Reversing timeline when insert a status
         .filter('reverse', function() {
             return function(items) {
                 return items.slice().reverse();
             };
         })
 
-        // Process paragraph
+        // Processing paragraph
         .filter('paragraph', function() {
             return function(content) {
                 var paragraph = content.split('\n'),
@@ -67,19 +74,22 @@
 
         // Timeline Controller
         .controller('TimelineController', ['$scope', function($scope) {
-
-            // Initial
+            // Initialize
             $scope.timeline = [];
 
             // Post status
             $scope.postStatus = function() {
+                // Create new status
                 var status = {
                     time: (new Date()).toLocaleString(),
                     paragraph: $scope.paragraph,
                     image: $scope.image
                 }
+
+                // Insert into timeline
                 $scope.timeline.push(status);
 
+                // Reset input
                 $scope.paragraph = null;
                 $scope.image = null;
             }
