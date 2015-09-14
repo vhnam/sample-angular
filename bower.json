@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.5",
-    "bootstrap": "~3.3.5",
-    "autosize": "~3.0.10"
+    "angular-elastic": "~2.5.0",
+    "bootstrap": "~3.3.5"
   }
 }

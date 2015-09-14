@@ -8,7 +8,7 @@
     </div>
     <div class="content">
         <div class="paragraph">
-            {{paragraph}}
+            <p bind-unsafe-html="paragraph | paragraph"></p>
         </div>
         <div class="image" ng-show="image">
             <img ng-src="{{image}}" alt="Image">

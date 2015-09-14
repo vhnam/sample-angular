@@ -40,7 +40,8 @@
             <section class="status-box">
                 <div class="input">
                     <img src="avatar.png" alt="Avatar" class="avatar">
-                    <textarea id="status-content" class="status-content" placeholder="What's on your mind?" ng-model="paragraph"></textarea>
+                    <textarea class="status-content" msd-elastic spellcheck="false"
+                            placeholder="What's on your mind?" ng-model="paragraph"></textarea>
                 </div>
                 <div class="toolbar">
                     <img src="insert-image.png" alt="Insert image" class="icon-insert-image">
@@ -53,13 +54,14 @@
             </section>
 
             <!-- Statuses -->
-            <status ng-repeat="status in timeline | reverse" time="{{status.time}}" paragraph="{{status.paragraph}}" image="{{status.image}}">
+            <status ng-repeat="status in timeline | reverse"
+                    time="{{status.time}}" paragraph="{{status.paragraph}}" image="{{status.image}}">
         </main>
 
 
         <!-- Scripts -->
         <script src="/public/components/angular/angular.min.js"></script>
-        <script src="/public/components/autosize/dist/autosize.min.js"></script>
+        <script src="/public/components/angular-elastic/elastic.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
