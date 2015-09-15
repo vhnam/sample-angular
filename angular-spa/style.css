@@ -96,8 +96,9 @@ section {
     padding-bottom: 30px;
 }
 
-.introduction .logo {
-    max-width: 100%;
+.introduction .col-logo {
+    text-align: right;
+    margin-top: 14px;
 }
 
 .introduction .info-list {
@@ -117,17 +118,14 @@ section {
     color: #bdbdbd;
 }
 
-.angular-2 .col-md-3 {
-    margin-top: 14px;
-}
-
 /* Responsive Design */
 @media(max-width: 640px) {
     .navigation .navbar-brand {
         padding: 0 16px;
     }
 
-    .angular-2 .col-md-3 {
+    .introduction .col-logo {
+        text-align: center;
         margin-top: 0;
     }
 }
